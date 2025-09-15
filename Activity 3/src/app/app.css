@@ -1,3 +1,9 @@
+body {
+  background-color: #1B1212;
+  margin: 0;
+  padding: 1rem 0 1rem 0;
+}
+
 header {
   position: fixed;
   top: 0;
@@ -41,11 +47,13 @@ h1 {
 app-home, app-features, app-guide, app-support, app-contact {
   display: block;
   height: auto;
-  padding-top: 1rem;
+  padding-top: 0;
+  margin: 1rem 0 1rem 0;
 }
 
+
 app-home {
-  padding-top: 3.5rem;
+  padding-top: 1rem;
 }
 
 .site-wrapper {
@@ -79,6 +87,9 @@ app-home {
   }
   .navbar li {
     margin: 0.4rem;
+  }
+  app-home {
+    height: 100vh;
   }
 }
 
