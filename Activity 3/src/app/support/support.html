@@ -1,0 +1,21 @@
+<div class="support-container">
+  <h2>Troubleshooting</h2>
+  <div class="support-grid">
+    <div *ngFor="let section of troubleshooting">
+      <h3>{{ section.section }}</h3>
+      <ul>
+        <li *ngFor="let step of section.steps">{{ step }}</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Maintenance and Care</h2>
+  <div class="support-grid">
+    <div *ngFor="let section of maintenance">
+      <h3>{{ section.section }}</h3>
+      <ul>
+        <li *ngFor="let step of section.steps">{{ step }}</li>
+      </ul>
+    </div>
+  </div>
+</div>
