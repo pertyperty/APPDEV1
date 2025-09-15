@@ -1,0 +1,32 @@
+<body>
+  <header>
+    <div class="container">
+      <div class="container-item">
+        <h1>Keyboard Documentation</h1>
+      </div>
+      <div class="container-item">
+        <nav class="navbar">
+          <ul>
+            <li [class.active] = "activeSection === 'home'"><a (click)="scrollTo('home')">Home</a></li>
+            <li [class.active] = "activeSection === 'features'"><a (click)="scrollTo('features')">Features</a></li>
+            <li [class.active] = "activeSection === 'guide'"><a (click)="scrollTo('guide')">Guide</a></li>
+            <li [class.active] = "activeSection === 'support'"><a (click)="scrollTo('support')">Support</a></li>
+            <li [class.active] = "activeSection === 'contact'"><a (click)="scrollTo('contact')">Contact Us</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  
+  <div class="site-wrapper">
+    <app-home id="home"></app-home>
+    <app-features id="features"></app-features>
+    <app-guide id="guide"></app-guide>
+    <app-support id="support"></app-support>
+    <app-contact id="contact"></app-contact>
+    <router-outlet />
+    <div id="cursor"></div>
+  </div>
+  
+  <app-footer></app-footer>
+</body>
