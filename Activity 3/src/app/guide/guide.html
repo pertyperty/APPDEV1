@@ -1,0 +1,21 @@
+<div class="guide-container">
+  <h2>Setup Instructions</h2>
+  <div class="instructions-grid">
+    <div *ngFor="let section of setupInstructions">
+      <h3>{{ section.section }}</h3>
+      <ul>
+        <li *ngFor="let step of section.steps">{{ step }}</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Using the Keyboard</h2>
+  <div class="instructions-grid">
+    <div *ngFor="let section of usageInstructions">
+      <h3>{{ section.section }}</h3>
+      <ul>
+        <li *ngFor="let step of section.steps">{{ step }}</li>
+      </ul>
+    </div>
+  </div>
+</div>
