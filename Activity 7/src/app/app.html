@@ -1,0 +1,8 @@
+<app-header [TitleEn]="TitleEn" [TitleJp]="TitleJp"></app-header>
+<app-sidebar></app-sidebar>
+
+<content>
+  <router-outlet (activate)="onRouteActivate($event)"></router-outlet>
+</content>
+
+<app-footer></app-footer>
