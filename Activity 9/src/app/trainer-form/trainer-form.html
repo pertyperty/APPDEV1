@@ -1,0 +1,44 @@
+<div class="form-container">
+  <div class="hero">
+    <h1>Pokémon Trainer Registration</h1>
+  </div>
+
+  <section>  
+    <form [formGroup]="inputForm.formGroup" (ngSubmit)="onSubmit()" class="trainer-form">
+      
+      <div class="input-group">
+        <label for="name">Name:</label>
+        <input id="name" type="text" formControlName="Name" placeholder="Trainer Name">
+      </div>
+
+      <div class="input-group">
+        <label for="age">Age:</label>
+        <input id="age" type="text" formControlName="Age" placeholder="Trainer Age">
+      </div>
+
+      <div class="input-group">
+        <label for="address">Address:</label>
+        <input id="address" type="text" formControlName="Address" placeholder="Trainer Address">
+      </div>
+
+      <fieldset formGroupName="PokemonParty">
+        <legend>Pokémon Party</legend>
+        <div class="pokemon-grid">
+          @for (i of [1, 2, 3, 4, 5, 6]; track i) {
+            <input
+              type="text"
+              [formControlName]="'Pokemon' + i"
+              placeholder="Pokémon {{ i }}"
+            >
+          }
+        </div>
+      </fieldset>
+
+      <div class="button-container">
+        <button class="reset-btn" type="reset" (click)="inputForm.formGroup.reset()">Reset</button>
+        <button class="confirm-btn" type="submit">Add Trainer</button>
+      </div>
+
+    </form>
+  </section>
+</div>

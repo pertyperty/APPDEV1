@@ -1,0 +1,148 @@
+* {
+  font-weight: normal;
+}
+
+:host {
+  display: block;
+  box-sizing: border-box;
+  margin-left: var(--sidebar-width);
+  margin-top: var(--header-height);
+  padding: 16px;
+}
+
+:host::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('/Johto_Region_Map.png') no-repeat center center/cover;
+  background-size: cover;
+  filter: blur(8px);
+  z-index: -1;
+}
+
+.home-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px;
+  line-height: 1.6;
+  color: #2d2d2d;
+}
+
+.hero {
+  backdrop-filter: blur(10px);
+  color: #f9f9f9;
+  text-align: center;
+  padding: 60px 20px;
+  border-radius: 16px;
+  margin-bottom: 32px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.hero h1 {
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+}
+
+.hero .tagline {
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+section {
+  background: #f9f9f9;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-left: 6px solid #b74545;
+  border-radius: 10px;
+  transition: transform 0.2s ease;
+  box-shadow: 0.2px 0.2px 10px rgba(0,0,0,0.2);
+}
+
+section:hover {
+  transform: scale(1.05);
+  box-shadow: 0.2px 0.2px 10px rgba(0,0,0,0.8);
+}
+
+h2 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.gym-table {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  background-color: #fff;
+  border: 2px solid #888;
+  border-collapse: collapse;
+  text-align: center;
+  box-shadow: 0.2px 0.2px 10px rgba(0,0,0,0.2);
+}
+
+.gym-header {
+  background-color: #b74545;
+  color: #fff;
+  font-weight: bold;
+  padding: 8px;
+  border: 1px solid #666;
+}
+
+.gym-cell {
+  padding: 8px;
+  border: 1px solid #666;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.leader-cell img {
+  height: 80px;
+  margin-bottom: 4px;
+}
+.leader-name {
+  font-weight: bold;
+}
+
+.location-cell {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.type-cell {
+  font-weight: bold;
+  color: #fff;
+}
+
+.badge-cell img {
+  height: 50px;
+  margin-bottom: 4px;
+}
+
+.map-section {
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-left: 6px solid #b74545;
+  border-radius: 10px;
+  box-shadow: 0.2px 0.2px 10px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+.map-container {
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  margin-top: 12px;
+}
+
+.map-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  border-radius: 12px;
+  margin: 0 auto;
+}
